@@ -1,2 +1,17 @@
-<span>(Home#index)>>> Welcome Aboard !</span>
-<%= render 'posts/feed' %>
+<div class="container-fluid px-5">
+  <div class="row">
+
+    <div class="col-3">
+      <%= render 'shared/temp/profile' %>
+    </div>
+    
+    <div class="col-6">
+      <%= render 'posts/feed' %>
+    </div>
+
+    <div class="col-3">
+      <%= render 'shared/temp/trends' %>
+    </div>
+
+  </div>
+</div>

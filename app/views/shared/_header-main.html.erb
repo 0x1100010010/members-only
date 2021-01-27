@@ -1,0 +1,19 @@
+  
+  <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-lg px-3 justify-content-between opacity-50">
+    <div><%= link_to 'Nerd Only Members Club', root_path, class: 'navbar-brand' %></div>
+    <div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to 'Posts', posts_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'New_Post', new_post_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

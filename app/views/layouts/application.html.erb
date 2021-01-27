@@ -12,17 +12,8 @@
 </head>
 
 <body>
-
-  <% if flash[:notice] %>
-  <div class="alert-success">
-    <%= notice %>
-  </div>
-  <% else flash[:alert] %>
-  <div class="alert-warning">
-    <%= alert %>
-  </div>
-  <% end %>
-
+  <%= render 'shared/alerts' %>
+  <%= render 'shared/header-main' %>
   <%= yield %>
 </body>
 

@@ -28,12 +28,11 @@ Basic concepts of Ruby on Rails have been used, including:
 
 ## Screenshot
 
-### When user is not Logged In
-![When user is not Logged In](./screenshots/anao-screenshot.png)
+### As Guest
+![When user is not Logged In](./screenshots/anon-screenshot.png)
 
-### When user is Logged In
+### As Registered User
 ![When user is Logged In](./screenshots/auth-screenshot.png)
-
 
 ## Designed With
 - Ruby

@@ -1,10 +1,10 @@
 // Lux 4.6.0
 // Bootswatch
 
-
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" !default;
+
 @import url($web-font-path);
 
 // Navbar ======================================================================
@@ -16,8 +16,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
 
   &-nav {
     .nav-link {
-      padding-top: .715rem;
-      padding-bottom: .715rem;
+      padding-top: 0.715rem;
+      padding-bottom: 0.715rem;
     }
   }
 
@@ -31,7 +31,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
 }
 
 .bg-light {
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   &.navbar-fixed-top {
     border-width: 0 0 1px;
@@ -79,7 +79,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
   }
 
   &:not([disabled]):not(.disabled):focus {
-    box-shadow: 0 0 0 .2rem rgba($gray-400, .5);
+    box-shadow: 0 0 0 0.2rem rgba($gray-400, 0.5);
   }
 }
 
@@ -128,7 +128,7 @@ th {
   &-sm {
     th,
     td {
-      padding: .75rem;
+      padding: 0.75rem;
     }
   }
 }
@@ -138,7 +138,7 @@ th {
 .custom-switch {
   .custom-control-label {
     &::after {
-      top: add(.15625rem, 2px);
+      top: add(0.15625rem, 2px);
       left: add(-2.25rem, 2px);
       width: subtract(1rem, 4px);
       height: subtract(1rem, 4px);
@@ -156,7 +156,7 @@ th {
 // Indicators ==================================================================
 
 .badge {
-  padding-top: .28rem;
+  padding-top: 0.28rem;
 
   &-pill {
     border-radius: 10rem;

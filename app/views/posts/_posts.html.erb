@@ -6,7 +6,7 @@
       <% if user_signed_in? %>
           <div><strong>@<%= post.user.username%></strong></div>
           <div>Posted At: <%= post.user.created_at%></div>
-        <% else %>
+      <% else %>
           Anonymus
       <% end %>
       </div>
@@ -15,7 +15,7 @@
         <p class="card-text"><%= post.body %></p>
       </div>
       <div class="card-footer">
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.name == post.user.name %>
           <%= link_to post do %>
             <i class="fas fa-link"></i>
           <% end %>
@@ -31,6 +31,8 @@
           <%= link_to new_post_path do %>
             <i class="fas fa-plus"></i>
           <% end %>
+        <% elsif user_signed_in? %>
+          Comment Here
         <% else %>
           <%= link_to 'Sign In', new_user_session_path %> to comment!
         <% end %>

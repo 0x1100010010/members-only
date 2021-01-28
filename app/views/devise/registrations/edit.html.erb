@@ -50,25 +50,25 @@
         <div class="card-header text-center text-muted"><i class="far fa-address-card fa-2x"></i></div>
         <div class='card-body py-5'>
           <%= f.input :name,
-                    required: true,
+                    required: false,
                     autofocus: true,
                     input_html: { class: "input mb-3" },
                     placeholder: "Full Name"%>
           <%= f.input :username,
-                    required: true,
+                    required: false,
                     input_html: { class: "input mb-3" },
                     placeholder: "Username"%>
           <%= f.input :email,
-                    required: true,
+                    required: false,
                     input_html: { class: "mb-3", autocomplete: "email" },
                     placeholder: "@email" %>
           <%= f.input :password,
-                    required: true,
+                    required: false,
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                     input_html: { class: "mb-3", autocomplete: "new-password" },
                     placeholder: "New Password" %>
           <%= f.input :password_confirmation,
-                    required: true,
+                    required: false,
                     input_html: { class: "mb-3", autocomplete: "new-password" },
                     placeholder: "Repeat New Password" %>
           <%= f.input :current_password,

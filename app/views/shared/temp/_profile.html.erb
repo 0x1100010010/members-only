@@ -1,12 +1,14 @@
 <div class="container">
   <div class="row justify-center py-4">
     <div class="card text-dark bg-light p-0">
-      <div class="card-header">Profile Info</div>
+      <div class="card-header"><strong>Hi <%= current_user.name %>!</strong></div>
       <div class="card-body">
-        <h5 class="card-title">Light card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">Profile Stats</h5>
+        <p class="card-text">
+        <strong>Posts Count# <%= current_user.posts.count %></strong>
+        </p>
       </div>
-      <div class="card-footer">Footer</div>
+      <div class="card-footer"></div>
     </div>
   </div>
 </div>

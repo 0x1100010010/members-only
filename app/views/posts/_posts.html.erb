@@ -2,29 +2,37 @@
 <div class="container mt-4">
   <div class="row justify-center">
     <div class="card text-dark bg-light p-0">
-      <div class="card-header">Posted By#</div>
+      <div class="card-header">
+      <% if user_signed_in? %>
+          @<%= post.user.username %>
+        <% else %>
+          Anonymus
+      <% end %>
+      </div>
       <div class="card-body">
         <h5 class="card-title"><%= post.title %></h5>
         <p class="card-text"><%= post.body %></p>
       </div>
       <div class="card-footer">
+        <% if user_signed_in? %>
+          <%= link_to post do %>
+            <i class="fas fa-link"></i>
+          <% end %>
+          
+          <%= link_to edit_post_path(post) do %>
+            <i class="far fa-edit"></i>
+          <% end %>
+          
+          <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
 
-        <%= link_to post do %>
-          <i class="fas fa-link"></i>
+          <%= link_to new_post_path do %>
+            <i class="fas fa-plus"></i>
+          <% end %>
+        <% else %>
+          <%= link_to 'Sign In', new_user_session_path %> to comment!
         <% end %>
-        
-        <%= link_to edit_post_path(post) do %>
-          <i class="far fa-edit"></i>
-        <% end %>
-        
-        <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fas fa-trash"></i>
-        <% end %>
-
-        <%= link_to new_post_path do %>
-          <i class="fas fa-plus"></i>
-        <% end %>
-
       </div>
     </div>
   </div>

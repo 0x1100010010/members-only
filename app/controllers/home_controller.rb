@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
   def index
-    @posts = Post.all
-    @post = Post.new
+    if user_signed_in?
+      @posts = Post.all
+      @post = Post.new
+    else
+      @posts = Post.all
+      @post = Post.new
+    end
   end
 end

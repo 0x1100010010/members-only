@@ -1,6 +1,5 @@
 // Lux 4.6.0
 // Bootswatch
-
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" !default;
@@ -27,7 +26,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
 }
 
 .bg-primary {
-  background-color: theme-color("primary") !important;
+  background-color: $primary !important;
 }
 
 .bg-light {
@@ -59,8 +58,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
   &-warning {
     &,
     &:hover,
-    &:not([disabled]):not(.disabled):active,
-    &:focus {
+    &:not([disabled]):not(.disabled):active &:focus {
       color: $white;
     }
   }
@@ -138,10 +136,10 @@ th {
 .custom-switch {
   .custom-control-label {
     &::after {
-      top: add(0.15625rem, 2px);
-      left: add(-2.25rem, 2px);
-      width: subtract(1rem, 4px);
-      height: subtract(1rem, 4px);
+      // top: add(0.15625rem, 2px);
+      // left: add(-2.25rem, 2px);
+      // width: subtract(1rem, 4px);
+      // height: subtract(1rem, 4px);
     }
   }
 }

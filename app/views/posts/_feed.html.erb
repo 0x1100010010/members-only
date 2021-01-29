@@ -1,4 +1,2 @@
-<% if user_signed_in? %>
-  <%= render 'posts/form' %>
-<% end %>
+<%= posts_form_if_signed_in %>
 <%= render 'posts/posts' %>

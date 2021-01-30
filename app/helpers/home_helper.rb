@@ -7,7 +7,5 @@ module HomeHelper
       render 'shared/header_helper/signed_out'
     end
   end
-
   
-
 end

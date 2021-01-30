@@ -6,8 +6,8 @@ module PostsHelper
   def posts_title_if(post)
     out = ''
     if user_signed_in?
-      out << content_tag(:div) { '@' + post.user.username }
-      out << content_tag(:div) { 'Posted At: ' + post.user.created_at.to_s }
+      out << content_tag(:div) { "@#{post.user.username}" }
+      out << content_tag(:div) { "Posted At: #{post.user.created_at}" }
     else
       out << 'Anonymus'
     end
@@ -27,7 +27,7 @@ module PostsHelper
     elsif user_signed_in?
       'Comment Here'
     else
-      content_tag(:a, href: new_user_session_path) { 'Sign In' } + ' to comment!'
+      "#{content_tag(:a, href: new_user_session_path) { 'Sign In' }} to comment!"
     end
     out.html_safe
   end

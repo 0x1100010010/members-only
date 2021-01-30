@@ -31,5 +31,4 @@ module PostsHelper
     end
     out.html_safe
   end
-
 end

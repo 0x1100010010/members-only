@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
-  before_action :owner?, only: %i[edit destroy]
   before_action :signed_in_only!, only: %i[new create]
 
   # GET /posts or /posts.json
@@ -77,5 +76,4 @@ class PostsController < ApplicationController
     flash[:alert] = 'Unauthorized request'
     redirect_to @post
   end
-  
 end

@@ -1,0 +1,2 @@
+      <%= content_tag(:li, class: 'nav-item') { link_to current_user.name, edit_user_registration_path, class: 'nav-link' } %>
+      <%= content_tag(:li, class: 'nav-item') { link_to 'Sign Out', destroy_user_session_path, class: 'nav-link' } %>

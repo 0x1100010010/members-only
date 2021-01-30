@@ -25,10 +25,11 @@ module PostsHelper
       out << content_tag(:a, href: post_path(post)) { content_tag(:i, class: 'fas fa-link') {} }
 
     elsif user_signed_in?
-      'Comment Here'
+      out << 'Comment Here'
     else
-      "#{content_tag(:a, href: new_user_session_path) { 'Sign In' }} to comment!"
+      out << "#{content_tag(:a, href: new_user_session_path) { 'Sign In' }} to comment!"
     end
     out.html_safe
   end
+
 end

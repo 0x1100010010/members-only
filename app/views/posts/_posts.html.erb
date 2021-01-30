@@ -1,0 +1,17 @@
+<% @posts.each do |post| %>
+<div class="container mt-4">
+  <div class="row justify-center">
+    <div class="card text-dark bg-light p-0">
+      <div class="card-header d-flex justify-content-between">
+        <%= posts_title_if(post) %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title %></h5>
+        <p class="card-text"><%= post.body %></p>
+      </div>
+      <div class="card-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

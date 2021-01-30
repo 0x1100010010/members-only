@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MembersOnly</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://kit.fontawesome.com/5028ea204c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <strong><%= notification %></strong>
+  <%= render 'shared/header-main' %>
+  <%= yield %>
+</body>
+
+</html>

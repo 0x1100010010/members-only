@@ -1,0 +1,15 @@
+  <%= link_to post do %>
+  <i class="fas fa-link"></i>
+  <% end %>
+
+  <%= link_to edit_post_path(post) do %>
+  <i class="far fa-edit"></i>
+  <% end %>
+
+  <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+  <i class="fas fa-trash"></i>
+  <% end %>
+
+  <%= link_to new_post_path do %>
+  <i class="fas fa-plus"></i>
+  <% end %>
